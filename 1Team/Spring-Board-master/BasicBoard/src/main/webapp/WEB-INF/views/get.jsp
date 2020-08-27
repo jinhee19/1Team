@@ -32,7 +32,7 @@
 
 					<!-- Header -->
 						<header id="header">
-						<div><center><h3><font face='배달의민족 한나는 열한살'>${place.title}</font></h3></center></div>
+						<div><h3><font face='배달의민족 한나는 열한살'>${place.title}</font></h3></div>
                             
 						</header>
 
@@ -41,13 +41,12 @@
 
 							<!-- Photo Galleries -->
 								<div class="gallery">
-
 									<!-- Filters -->
 										<header>
 											<h2>Information</h2>
                                             <div id="pic">
 											<img src="${place.image}" width=50% height=50%/>
-                                                
+                                             
 									<div class="social column">
 									<table>
 									<c:if test="${not empty place.title}">
@@ -77,59 +76,22 @@
 									</c:if>
 									
 									</table>
-
-									<p>
+									
+										<c:if test="${not empty blog}">
 										<div class="content">
-										<div class="media">
-											<a href="https://ggong5221.blog.me/221928717491"><img src="images/thumbs/서울.jpg" alt="" /></a>
-											<center><h5>#북서울꿈의숲 맛집 편안하게 식사하기 좋은 동적불고기</h5></center>
-										</div>
-										<div class="media">
-											<a href="https://blog.naver.com/ohmjsm?Redirect=Log&logNo=222014828980
-"><img src="images/thumbs/경기.jpg" alt="" title="This right here is a caption." onclick="goto()"></a>
-											<center><h5>#북서울 꿈의숲 카페 뮈에, 갬성 가득 빵집</h5></center>
-										</div>
-										<div class="media">
-											<a href="https://blog.naver.com/ohmjsm?Redirect=Log&logNo=222014828980"><img src="images/thumbs/서울.jpg" alt="" /></a>
-											<center><h5>#북서울꿈의숲 카페 뮈에(feat.프랑스 전통 밀가루 로 만든 건강하고 맛있는 빵)</h5></center>
-										</div>
-										<div class="media">
-											<a href="https://blog.naver.com/ls_eun?Redirect=Log&logNo=221997857349"><img src="images/thumbs/서울.jpg" alt="" /></a>
-											<center><h5>#서울 떡볶이 맛집 드림랜드 + 북서울꿈의숲</h5></center>
-										</div>
-										<div class="media">
-											<a href="http://elena.pe.kr/222030643008"><img src="images/thumbs/서울.jpg" alt="" /></a>
-											<center><h5>#서울 빵지순례 역대급 감성 북서울꿈의숲 카페 뮈에</h5></center>
-										</div>
-										<div class="media">
-											<a href="https://blog.naver.com/sera8668?Redirect=Log&logNo=222042368846"><img src="images/thumbs/서울.jpg" alt="" /></a>
-											<center><h5>#서울 가볼만한곳 북서울 꿈의숲 (카페 & 주차장)</h5></center>
-										</div>
-										<div class="media">
-											<a href="https://blog.naver.com/jdhrg?Redirect=Log&logNo=222043642477"><img src="images/thumbs/서울.jpg" alt="" /></a>
-											<center><h5>#[서울 공원 산책] 북서울 꿈의 숲 데이트 추천 + 전망대 휴관일</h5></center>
-										</div>
-										<div class="media">
-											<a href="https://blog.naver.com/alice_hako?Redirect=Log&logNo=221908531083"><img src="images/thumbs/서울.jpg" alt="" /></a>
-											<center><h5># [북서울꿈의숲] 닐리 파스타 & 리조또 맛집</h5></center>
-										</div>
-										</div>
+										<c:forEach items="${blog }" var="blogList">
+											<div class="media">
+												<a href="${blogList.url }"><img src="${blogList.blog_image }" alt="" /></a>
+												<h5>${blogList.title }</h5>
+											</div>
+										</c:forEach>
+										</c:if>
+									</div>
+									</div>
+									</div>
+								</header>
 									
-
-
-
-
-
-
-									</p>
 								</div>
-										  </div>
-                          
-										</header>
-
-									
-									
-										</div>
 							
 						</section>
 

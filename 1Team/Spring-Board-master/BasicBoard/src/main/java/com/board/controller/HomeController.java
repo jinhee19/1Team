@@ -59,6 +59,7 @@ public class HomeController {
 	public void get(@RequestParam("bno") Long bno, Model model) {
 		System.out.println("please........   "+bno);
 		model.addAttribute("place", service.get(bno));
+		model.addAttribute("blog", service.getBlog(bno));
 	}
 
 

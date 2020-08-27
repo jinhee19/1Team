@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.board.domain.BlogVO;
 import com.board.domain.Criteria;
 import com.board.domain.PlaceVO;
 import com.board.mapper.PlaceMapper;
@@ -45,6 +46,13 @@ public class PlaceServiceImpl implements PlaceService{
 
 		log.info("get total count");
 		return mapper.getTotalCount(cri);
+	}
+	
+	@Override
+	public List<BlogVO> getBlog(Long bno){
+		log.info("get Blog..............");
+
+		return mapper.getBlog(bno);
 	}
 	
 	
