@@ -62,8 +62,7 @@
 
 						$tabs.on('click', 
                                  */
-                                 function(e) {
-
+                         function(e) {
 							var $this = $(this),
 								tag = $this.data('tag');
 
